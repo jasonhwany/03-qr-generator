@@ -1,5 +1,19 @@
 "use client";
 import AdUnit from "@/components/AdUnit"
+
+import Script from "next/script"
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "QR코드 생성기 (QR Code Generator)",
+  url: "https://qr.moneystom7.com",
+  description: "URL과 텍스트를 QR코드로 즉시 변환하는 무료 도구",
+  applicationCategory: "UtilityApplication",
+  operatingSystem: "Any",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  inLanguage: ["ko", "en"],
+}
 import { useState, useRef } from "react";
 
 export default function QRGenerator() {
