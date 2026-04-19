@@ -10,13 +10,11 @@ export const metadata: Metadata = {
     default: "QR코드 생성기 — MoneyStom7",
     template: "%s | MoneyStom7",
   },
-  description: "URL·텍스트를 QR코드로 즉시 생성. 무료 온라인 QR코드 메이커. Free online QR code generator. Create QR codes for URLs and text instantly. No signup required.",
-  keywords: ["QR코드 생성기", "QR Code Generator", "무료", "온라인", "계산기", "QR code generator", "free QR code", "QR maker", "URL to QR code"],
-  authors: [{ name: "MoneyStom7" }],
+  description: "URL·텍스트를 QR코드로 즉시 생성. 무료 온라인 QR코드 메이커. Free QR code generator.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "QR코드 생성기 — MoneyStom7",
-    description: "URL·텍스트를 QR코드로 즉시 생성. 무료 온라인 QR코드 메이커.",
+    description: "URL·텍스트를 QR코드로 즉시 생성. 무료 온라인 QR코드 메이커. Free QR code generator.",
     url: BASE_URL,
     siteName: "MoneyStom7",
     locale: "ko_KR",
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "QR코드 생성기 — MoneyStom7",
-    description: "URL·텍스트를 QR코드로 즉시 생성. 무료 온라인 QR코드 메이커.",
+    description: "URL·텍스트를 QR코드로 즉시 생성. 무료 온라인 QR코드 메이커. Free QR code generator.",
   },
   robots: {
     index: true,
@@ -39,6 +37,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko">
       <body>
         {children}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-GN51TN6PS4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GN51TN6PS4');
+          `}
+        </Script>
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8414331859152952"
