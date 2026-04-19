@@ -1,3 +1,4 @@
+import Script from "next/script"
 import type { Metadata } from "next";
 import "./globals.css";
 export const metadata: Metadata = {
@@ -5,5 +6,11 @@ export const metadata: Metadata = {
   description: "URL이나 텍스트를 QR코드로 즉시 변환. PNG 다운로드 가능. 무료 온라인 QR 생성기.",
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="ko"><body>{children}</body></html>;
+  return <html lang="ko"><body>{children}        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8414331859152952"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </body></html>;
 }

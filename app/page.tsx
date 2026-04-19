@@ -1,4 +1,5 @@
 "use client";
+import AdUnit from "@/components/AdUnit"
 import { useState, useRef } from "react";
 
 export default function QRGenerator() {
